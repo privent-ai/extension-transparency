@@ -1,0 +1,33 @@
+name: Docs Lint
+
+on:
+  pull_request:
+  push:
+    branches:
+      - main
+
+jobs:
+  docs-lint:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+
+      - name: Install markdown and link check tools
+        run: npm install --no-save markdownlint-cli2 lychee
+
+      - name: Run markdownlint-cli2
+        run: npx markdownlint-cli2 "**/*.md"
+
+      - name: Run lychee link checker
+        run: npx lychee --exclude "localhost" --exclude "127.0.0.1" "**/*.md"
+
+      - name: Validate compliance framework JSON
+        run: |
+          node -e "JSON.parse(require('fs').readFileSync('compliance/compliance-framework.json','utf8')); console.log('compliance-framework.json is valid JSON')"
+          # TODO: validate against JSON Schema when schema file is added.

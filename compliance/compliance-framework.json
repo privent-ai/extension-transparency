@@ -1,0 +1,95 @@
+{
+  "version": "0.1.0",
+  "product": "Privent Browser Extension",
+  "last_updated": "2026-04-22",
+  "frameworks": [
+    {
+      "name": "SOC 2",
+      "status": "preparation-in-progress",
+      "controls": [
+        {
+          "id": "CC6.1",
+          "summary": "Logical access to extension configuration state is constrained by extension runtime boundaries and deployment controls.",
+          "evidence": [
+            "docs/architecture/extension-internals.md",
+            "docs/architecture/trust-boundaries.md"
+          ]
+        },
+        {
+          "id": "CC7.2",
+          "summary": "Security events and concerns are reportable through a documented process.",
+          "evidence": [
+            "SECURITY.md",
+            "docs/threat-model.md"
+          ]
+        },
+        {
+          "id": "CC8.1",
+          "summary": "Change management visibility is provided through changelog and pull request checks.",
+          "evidence": [
+            "CHANGELOG.md",
+            ".github/workflows/docs-lint.yml"
+          ]
+        },
+        {
+          "id": "CC9.2",
+          "summary": "Risk impact from extension data handling is addressed through documented trust boundaries and threat mapping.",
+          "evidence": [
+            "docs/threat-model.md",
+            "docs/architecture/trust-boundaries.md"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "EU AI Act",
+      "status": "aligned-article-26",
+      "controls": [
+        {
+          "id": "A26-01",
+          "summary": "Extension interaction supports operator oversight with explicit allow, warn, and block outcomes.",
+          "evidence": [
+            "docs/data-flow.md",
+            "docs/architecture/detection-pipeline.md"
+          ]
+        },
+        {
+          "id": "A26-02",
+          "summary": "Extension scope and trust boundaries are explicitly documented for operator understanding.",
+          "evidence": [
+            "README.md",
+            "docs/architecture/trust-boundaries.md"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "GDPR",
+      "status": "operational",
+      "controls": [
+        {
+          "id": "GDPR-5-1-c",
+          "summary": "Data minimization is documented for extension-side processing.",
+          "evidence": [
+            "docs/privacy-policy.md",
+            "docs/data-flow.md"
+          ]
+        },
+        {
+          "id": "GDPR-15-22",
+          "summary": "Data subject rights process and contact path are documented.",
+          "evidence": [
+            "compliance/gdpr-notes.md",
+            "SECURITY.md"
+          ]
+        }
+      ]
+    }
+  ],
+  "scope_exclusions": [
+    "Backend API internals",
+    "ACARS risk scoring algorithm",
+    "LLM Judge integration",
+    "Semantic engine"
+  ]
+}
