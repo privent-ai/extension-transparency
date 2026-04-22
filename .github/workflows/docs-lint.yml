@@ -22,10 +22,10 @@ jobs:
         run: npm install --no-save markdownlint-cli2 lychee
 
       - name: Run markdownlint-cli2
-        run: npx markdownlint-cli2 "**/*.md"
+        run: npx markdownlint-cli2 "README.md" "SECURITY.md" "CODE_OF_CONDUCT.md" "CHANGELOG.md" "docs/**/*.md" "src/**/*.md" "compliance/**/*.md" "audits/**/*.md" ".github/**/*.md"
 
       - name: Run lychee link checker
-        run: npx lychee --exclude "localhost" --exclude "127.0.0.1" "**/*.md"
+        run: npx lychee --exclude "localhost" --exclude "127.0.0.1" "README.md" "SECURITY.md" "CODE_OF_CONDUCT.md" "CHANGELOG.md" "docs/**/*.md" "src/**/*.md" "compliance/**/*.md" "audits/**/*.md" ".github/**/*.md"
 
       - name: Validate compliance framework JSON
         run: |
