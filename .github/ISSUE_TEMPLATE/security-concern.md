@@ -24,6 +24,6 @@ If known, describe a possible fix or control.
 
 ## Sensitive Details
 
-If details are sensitive, email hello@privent.ai instead of posting publicly.
+If details are sensitive, email [hello@privent.ai](mailto:hello@privent.ai) instead of posting publicly.
 
 Last reviewed: 2026-04-22

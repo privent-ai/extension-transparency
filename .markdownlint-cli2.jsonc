@@ -1,0 +1,12 @@
+{
+  "config": {
+    "default": true,
+    "MD013": {
+      "line_length": 200,
+      "heading_line_length": 200,
+      "code_blocks": false,
+      "code_lines": false,
+      "tables": false
+    }
+  }
+}

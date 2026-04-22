@@ -1,6 +1,10 @@
 # Privent Extension Transparency
 
-This repository exists to provide radical, verifiable transparency into how the Privent browser extension handles user data at the extension trust boundary. It documents observable extension behavior, data-flow contracts, and controls that external reviewers can inspect without access to proprietary backend or semantic-engine internals.
+This repository exists to provide radical, verifiable transparency into how the
+Privent browser extension handles user data at the extension trust boundary.
+It documents observable extension behavior, data-flow contracts, and controls
+that external reviewers can inspect without access to proprietary backend or
+semantic-engine internals.
 
 ## What this repo is
 

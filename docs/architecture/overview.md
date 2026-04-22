@@ -20,6 +20,9 @@ flowchart LR
 
 ## Deliberate Scope Boundary
 
-This repository does not document backend implementation internals, ACARS scoring internals, LLM Judge internals, or semantic engine internals. The trust goal is to make extension behavior and extension data boundary auditable while keeping proprietary detection internals private.
+This repository does not document backend implementation internals, ACARS
+scoring internals, LLM Judge internals, or semantic engine internals.
+The trust goal is to make extension behavior and extension data boundary
+auditable while keeping proprietary detection internals private.
 
 Last reviewed: 2026-04-22
