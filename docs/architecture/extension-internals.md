@@ -11,8 +11,7 @@ This file documents extension internals that are relevant to extension-side data
 ## Permissions
 
 - Manifest permission: `storage`.
-- Host permissions include supported AI tool domains and broader host matching used by extension routing logic.
-- Activation script runs on `https://*/extension/activate*` to support unmanaged activation flow.
+- Host permissions are limited to supported AI tool domains: ChatGPT, Claude, and Gemini.
 
 ## Interaction Flow
 
